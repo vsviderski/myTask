@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Block = styled.div`
-	width: 1145px;
-	height: 530px;
-	background-color: #DCDCDC;
+	width: 1150px;
+	background-color: white;
 	margin-left: 250px;
 	margin-top: 50px;
-	border-radius:10px;
+	border-radius: 10px;
 `;

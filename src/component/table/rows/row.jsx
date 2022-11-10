@@ -3,15 +3,27 @@ const Row = ({ user }) => {
 	const { name, email, address, phone, company } = user;
 	const { street, suite, city } = address;
 	return (
-		<S.TrBlock>
-			<S.TdBlock><S.String>{name}</S.String></S.TdBlock>
-			<S.TdBlock><S.Link href={email}><S.String>{email}</S.String></S.Link></S.TdBlock>
-			<S.TdBlock><S.String>
-				{city}, {street}, {suite}</S.String>
-			</S.TdBlock>
-			<S.TdBlock><S.String>{phone}</S.String></S.TdBlock>
-			<S.TdBlock><S.String>{company.name}</S.String></S.TdBlock>
-		</S.TrBlock>
+		<S.Block>
+			<S.DivCeilFirst>
+				<S.String>{name}</S.String>
+			</S.DivCeilFirst>
+			<S.DivCeilSecond>
+				<S.Link href={email}>
+					<S.String>{email}</S.String>
+				</S.Link>
+			</S.DivCeilSecond>
+			<S.DivCeilThird>
+				<S.String>
+					{city}, {street}, {suite}
+				</S.String>
+			</S.DivCeilThird>
+			<S.DivCeilFourth>
+				<S.String>{phone}</S.String>
+			</S.DivCeilFourth>
+			<S.DivCeilFifth>
+				<S.String>{company.name}</S.String>
+			</S.DivCeilFifth>
+		</S.Block>
 	);
 };
 

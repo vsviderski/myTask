@@ -10,7 +10,7 @@ const Header = ({ onChange }) => {
 			<S.Title>Список пользователей</S.Title>
 			<S.Input
 				onChange={handleUserName}
-				placeholder="Поиск по Ф.И.О"
+				placeholder="Поиск по ФИО"
 				type="text"
 			/>
 		</S.Block>

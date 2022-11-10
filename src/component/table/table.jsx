@@ -30,54 +30,53 @@ const Table = ({ value }) => {
 
 	return (
 		<S.Block>
-			<S.Table>
-				<S.Tbody>
-					<S.TrHeader>
-						<S.TdCeil
-							onClick={() => {
-								sortName();
-							}}
-						>
-							ФИО
-						</S.TdCeil>
-						<S.TdCeil
-							onClick={() => {
-								sortName();
-							}}
-						>
-							E-mail
-						</S.TdCeil>
-						<S.TdAddress
-							onClick={() => {
-								sortName();
-							}}
-						>
-							Адрес (город/улица/здание)
-						</S.TdAddress>
-						<S.TdCeil
-							onClick={() => {
-								sortName();
-							}}
-						>
-							Телефон
-						</S.TdCeil>
-						<S.TdCeil
-							onClick={() => {
-								sortName();
-							}}
-						>
-							Компания
-						</S.TdCeil>
-					</S.TrHeader>
-
-					{filteredUsers.map((user) => (
-						<Row user={user} key={user.id} />
-					))}
-				</S.Tbody>
-			</S.Table>
-
+			<S.FirstSection>
+				<S.DivCeil
+					onClick={() => {
+						sortName();
+					}}
+				>
+					<S.Line>ФИО</S.Line>
+				</S.DivCeil>
+				<S.DivCeil
+					onClick={() => {
+						sortName();
+					}}
+				>
+					<S.Line>E-mail</S.Line>
+				</S.DivCeil>
+				<S.DivAddress
+					onClick={() => {
+						sortName();
+					}}
+				>
+					{" "}
+					<S.Line>Адрес</S.Line>
+				</S.DivAddress>
+				<S.DivCeil
+					onClick={() => {
+						sortName();
+					}}
+				>
+					{" "}
+					<S.Line>Телефон</S.Line>
+				</S.DivCeil>
+				<S.DivCeil
+					onClick={() => {
+						sortName();
+					}}
+				>
+					{" "}
+					<S.Line>Компания</S.Line>
+				</S.DivCeil>
+			</S.FirstSection>
+			<S.SecondSection>
+				{filteredUsers.map((user) => (
+					<Row user={user} key={user.id} />
+				))}
+			</S.SecondSection>
 			<S.Count>
-				<S.Line>Итого: {data.length}</S.Line>
+				<S.LineCount>Итого: {data.length}</S.LineCount>
 			</S.Count>
 		</S.Block>
 	);

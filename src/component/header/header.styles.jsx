@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Block = styled.div`
-	margin-left: 50px;
+	background-color: #cdcdcd;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 40px;
-	width: 1050px;
+	width: 1150px;
 `;
 
 export const Title = styled.h1`
@@ -20,5 +19,5 @@ export const Input = styled.input`
 	border: none;
 	height: 20px;
 	border-radius: 3px;
-	outline:none;
+	outline: none;
 `;
