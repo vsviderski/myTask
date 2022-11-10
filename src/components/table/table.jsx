@@ -41,7 +41,6 @@ const Table = ({ searchValue }) => {
   };
 
   const handleSortingChange = (accessor) => {
-    console.log('test')
     const sortOrder =
       accessor === sortField && order === ASC
         ? DESC
