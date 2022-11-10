@@ -3,7 +3,7 @@ import Header from "./components/header/header";
 import Table from "./components/table/table";
 import * as S from "./App.styles";
 
-function App() {
+const App = () => {
 	const [searchValue, setSearchValue] = useState('');
 	const handleUserName = (value) => {
 		setSearchValue(value);
