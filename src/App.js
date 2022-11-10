@@ -1,18 +1,18 @@
 import { useState } from "react";
-import Header from "./component/header/header";
-import Table from "./component/table/table";
+import Header from "./components/header/header";
+import Table from "./components/table/table";
 import * as S from "./App.styles";
 
 function App() {
-	const [value, setValue] = useState("");
+	const [searchValue, setSearchValue] = useState('');
 	const handleUserName = (value) => {
-		setValue(value);
+		setSearchValue(value);
 	};
 
 	return (
 		<S.Block>
 			<Header onChange={handleUserName} />
-			<Table value={value} />
+			<Table searchValue={searchValue} />
 		</S.Block>
 	);
 }
